@@ -1,7 +1,9 @@
 package SeleniumPackage;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.*;
+import org.openqa.selenium.WebElement;
 
 public class SeleniumClass {
 
@@ -20,10 +22,14 @@ public class SeleniumClass {
 				
 				System.out.println("Successfully opened website www.google.com");
 		 
+				// Enter the query string "Cheese" into Google search
+		        WebElement query = driver.findElement(By.name("q"));
+		        query.sendKeys("Cheese");
+				
 				//Wait for 5 Sec
 //				Thread.sleep(5);
 				try {
-		            Thread.sleep(10000);
+		            Thread.sleep(1000);
 		        } catch (InterruptedException e) {
 		            e.printStackTrace();
 		        }
