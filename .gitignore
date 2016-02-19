@@ -1,1 +1,11 @@
+#ignore bin directory
 /bin/
+
+#ignore all .class files
+*.class
+
+#ignore files ending in ~
+*~
+
+#ignore metadata files
+.metadata
