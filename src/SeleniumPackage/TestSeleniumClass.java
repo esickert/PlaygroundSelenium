@@ -19,7 +19,7 @@ public class TestSeleniumClass {
 //		WebDriver driver = new FirefoxDriver();
 		WebDriver x = new FirefoxDriver();
 		//Launch the Google Website
-//		xr.get("http://www.store.demoqa.com");
+//		x.get("http://www.store.demoqa.com");
 		x.get("http://www.google.com");
 //		x.get("http://10.1.10.76:8080");
 		 
