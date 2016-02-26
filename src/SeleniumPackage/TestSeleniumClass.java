@@ -31,12 +31,14 @@ public class TestSeleniumClass {
 		}	catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-
-		// Enter the query string "Cheese" into Google search and hits ENTER
+		String s = x.getCurrentUrl();
+		System.out.println("Current open website is: " + s);	// Enter the query string "Cheese" into Google search and hits ENTER
 		WebElement query = x.findElement(By.name("q"));
 		x.findElement(By.xpath("//input[@aria-label='Search']"));
-		query.sendKeys("apple");
+		query.sendKeys("selenium");
 		query.sendKeys(Keys.ENTER);
+		
+		
 		
 		
 		//****************************************************************************
@@ -50,7 +52,7 @@ public class TestSeleniumClass {
 //		query.sendKeys(Keys.ENTER);
 		//****************************************************************************
 
-		System.out.println("Successfully entered query string apple it ENTER");
+		System.out.println("Successfully entered query string 'selenium' in Google hit ENTER");
 
 		//Wait for 5 Sec   I BELIEVE THIS IS WRONG!!!!!
 //		Thread.sleep(5);  //this produces an exception that needs to be caught
