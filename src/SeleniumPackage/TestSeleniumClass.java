@@ -20,8 +20,16 @@ public class TestSeleniumClass {
 		WebDriver x = new FirefoxDriver();
 		//Launch the Google Website
 //		x.get("http://www.store.demoqa.com");
+		x.navigate().to("http://www.bing.com");
+		System.out.println("Successfully opened 'www.bing.com' website using 'x.navigate().to()");
+		try {
+			Thread.sleep(10000);
+		}	catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		x.get("http://www.google.com");
 //		x.get("http://10.1.10.76:8080");
+		
 		 
 		// Prints a success message to the screen
 		System.out.println("Successfully opened website www.google.com");
@@ -34,6 +42,7 @@ public class TestSeleniumClass {
 		String s = x.getCurrentUrl();
 		System.out.println("Current open website is: " + s);	// Enter the query string "Cheese" into Google search and hits ENTER
 		WebElement query = x.findElement(By.name("q"));
+		
 		x.findElement(By.xpath("//input[@aria-label='Search']"));
 		query.sendKeys("selenium");
 		query.sendKeys(Keys.ENTER);
