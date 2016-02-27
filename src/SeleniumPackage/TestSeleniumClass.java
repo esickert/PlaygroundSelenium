@@ -13,21 +13,21 @@ public class TestSeleniumClass {
 		// TODO Auto-generated method stub
 		int count = 0;
 		
-		for (int i = 0; i < 1; i++)	{
+		for (int i = 0; i <50; i++)	{
 		// Create a new instance of the Firefox driver????????
 		// driver is an instance of the WebDriver class???????
 //		WebDriver driver = new FirefoxDriver();
-		WebDriver x = new FirefoxDriver();
+		WebDriver selenium = new FirefoxDriver();
 		//Launch the Google Website
 //		x.get("http://www.store.demoqa.com");
-		x.navigate().to("http://www.bing.com");
+		selenium.navigate().to("http://www.bing.com");
 		System.out.println("Successfully opened 'www.bing.com' website using 'x.navigate().to()");
 		try {
 			Thread.sleep(10000);
 		}	catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		x.get("http://www.google.com");
+		selenium.get("http://www.google.com");
 //		x.get("http://10.1.10.76:8080");
 		
 		 
@@ -39,12 +39,12 @@ public class TestSeleniumClass {
 		}	catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		String s = x.getCurrentUrl();
+		String s = selenium.getCurrentUrl();
 		System.out.println("Current open website is: " + s);	// Enter the query string "Cheese" into Google search and hits ENTER
-		WebElement query = x.findElement(By.name("q"));
+		WebElement query = selenium.findElement(By.name("q"));
 		
-		x.findElement(By.xpath("//input[@aria-label='Search']"));
-		query.sendKeys("selenium");
+		selenium.findElement(By.xpath("//input[@aria-label='Search']"));
+		query.sendKeys("apple");
 		query.sendKeys(Keys.ENTER);
 		
 		
@@ -71,9 +71,15 @@ public class TestSeleniumClass {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-
+		selenium.findElement(By.xpath("html/body/div[1]/div[5]/div[4]/div[7]/div[1]/div[3]/div/div[2]/div[2]/div/div/div/div[1]/div/div/h3/a")).click();
+		System.out.println("Successfully clicked on the link to Apple website. Retrieved link xpath via Firebug analysis tool");
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		//Close the driver
-		x.quit();
+		selenium.quit();
 		System.out.println("First Seleniuim webdriver app!!! YEAAAAAA");
 		System.out.println("This script has run " + ++count + " times.");
 		}
