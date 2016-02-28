@@ -1,20 +1,17 @@
 package SeleniumPackage;
 
 import org.openqa.selenium.WebDriver;
-//import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.firefox.*;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.Keys;
 
 public class SeleniumClass	{
 	
-//	WebDriver selenium = new FirefoxDriver();
+	WebDriver selenium = new FirefoxDriver();
 	
 	SeleniumClass()	{
 	}
-
-	//got this of the web. I know Thtread.sleeo throws an exception
-//	public void ClearBrowserCache()	{
-//		webDriver.Manage().Cookies.DeleteAllCookies(); //delete all cookies
-//		Thread.Sleep(5000); //wait 5 seconds to clear cookies.
-//	}
 	
 	public void sleep()	{
 		try {
@@ -24,7 +21,7 @@ public class SeleniumClass	{
 		}
 	}
 	
-	public void clearCookies(WebDriver driver)	{
-		driver.manage().deleteAllCookies();
+	public void clearCookies()	{
+		selenium.manage().deleteAllCookies();
 	}
 }

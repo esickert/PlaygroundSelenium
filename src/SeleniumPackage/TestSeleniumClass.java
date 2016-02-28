@@ -1,8 +1,6 @@
 package SeleniumPackage;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.*;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.Keys;
 
@@ -16,20 +14,19 @@ public class TestSeleniumClass {
 		for (int i = 0; i < 10; i++)	{
 		// Create a new instance of the Firefox driver????????
 		// driver is an instance of the WebDriver class???????
-//		WebDriver driver = new FirefoxDriver();
-		WebDriver selenium = new FirefoxDriver();
+//		WebDriver selenium = new FirefoxDriver();
 		SeleniumClass x = new SeleniumClass();
 		
 		//this will maximize the browser window to full screen
-		selenium.manage().window().maximize(); 
+		x.selenium.manage().window().maximize(); 
 //		x.get("http://www.store.demoqa.com");
-		selenium.navigate().to("http://www.bing.com");
+		x.selenium.navigate().to("http://www.bing.com");
 		System.out.println("Successfully opened 'www.bing.com' website using 'x.navigate().to()");
 		
 		System.out.println("Sleeps for 10 secs, 10000 microsecs");
 		x.sleep();
 		//Launch the Google Website
-		selenium.get("http://www.google.com");
+		x.selenium.get("http://www.google.com");
 //		x.get("http://10.1.10.76:8080");
 		 
 		// Prints a success message to the screen
@@ -37,11 +34,11 @@ public class TestSeleniumClass {
 		System.out.println("Sleeps for 10 secs, 10000 microsecs");
 		x.sleep();
 		
-		String s = selenium.getCurrentUrl();
+		String s = x.selenium.getCurrentUrl();
 		System.out.println("Current open website is: " + s);	// Enter the query string "Cheese" into Google search and hits ENTER
-		WebElement query = selenium.findElement(By.name("q"));
+		WebElement query = x.selenium.findElement(By.name("q"));
 		
-		selenium.findElement(By.xpath("//input[@aria-label='Search']"));
+		x.selenium.findElement(By.xpath("//input[@aria-label='Search']"));
 		query.sendKeys("apple");
 		query.sendKeys(Keys.ENTER);
 		
@@ -68,7 +65,7 @@ public class TestSeleniumClass {
 			e.printStackTrace();
 		} */
 		
-		selenium.findElement(By.xpath("html/body/div[1]/div[5]/div[4]/div[7]/div[1]/div[3]/div/div[2]/div[2]/div/div/div/div[1]/div/div/h3/a")).click();
+		x.selenium.findElement(By.xpath("html/body/div[1]/div[5]/div[4]/div[7]/div[1]/div[3]/div/div[2]/div[2]/div/div/div/div[1]/div/div/h3/a")).click();
 		
 		System.out.println("Successfully clicked on the link to Apple website. Retrieved link xpath via Firebug analysis tool");
 		x.sleep();
@@ -79,11 +76,11 @@ public class TestSeleniumClass {
 		} */
 		System.out.println("Sleeps for 10 secs, 10000 microsecs");
 		x.sleep();
-		x.clearCookies(selenium);  //I think this is working???
+		x.clearCookies();  //I think this is working???
 //		selenium.manage().deleteAllCookies();
 		System.out.println("Deleted all browser cookies");
 		//Close the driver
-		selenium.quit();
+		x.selenium.quit();
 		System.out.println("Successfully closed the browser FireFox");
 		System.out.println("First Seleniuim webdriver app!!! YEAAAAAA");
 		System.out.println("This script has run " + ++count + " times.");
