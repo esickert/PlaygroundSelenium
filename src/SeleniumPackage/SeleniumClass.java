@@ -14,6 +14,7 @@ public class SeleniumClass	{
 	}
 	
 	public void sleep()	{
+		System.out.println("Sleeps for 10 secs, 10000 microsecs");
 		try {
 			Thread.sleep(10000);
 		}	catch (InterruptedException e) {
@@ -23,5 +24,10 @@ public class SeleniumClass	{
 	
 	public void clearCookies()	{
 		selenium.manage().deleteAllCookies();
+		System.out.println("Deleted all browser cookies");
+	}
+	
+	public void maximizeWindow()	{
+		selenium.manage().window().maximize();
 	}
 }
