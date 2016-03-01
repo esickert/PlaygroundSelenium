@@ -8,16 +8,12 @@ public class TestSeleniumClass {
 	
 		for (int i = 0; i < 1; i++)	{
 		System.out.println("NEED TO SET THIS UP WITH JUNIT!!!!!");
-		// Create a new instance of the Firefox driver????????
-		// driver is an instance of the WebDriver class???????
-//		WebDriver selenium = new FirefoxDriver();
 		Paxata x = new Paxata();  //this creates an instance of Paxata class which contains an instance of WebDriver
-		//this will maximize the browser window to full screen
-//		x.selenium.manage().window().maximize(); 
+
 //		x.get("http://www.store.demoqa.com");
 //		x.selenium.get("http://10.1.10.63:8080");
 //		x.selenium.navigate().to("http://www.bing.com");
-//		System.out.println("Successfully opened 'www.bing.com' website using 'x.navigate().to()");
+//		System.out.println("Successfully opened 'www.bing.com' website using 'x.navigate().to()'");
 		
 //		x.sleep();
 		//Launch the Google Website
