@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class Paxata	extends SeleniumClass{
 	
-	String ipAddress = "10.1.10.72:8080";
+	String ipAddress = "10.1.10.74:8080";
 	
 	Paxata()	{
 	}
@@ -19,8 +19,10 @@ public class Paxata	extends SeleniumClass{
 	}  */
 	
 	public void loginToPaxataAndCloseHelp()	{
-		System.out.println("this will login to paxata. NOTE these web elements were found using WebDriver element locator for Firefox");
+		System.out.println("This will login to paxata. NOTE these web elements were found using WebDriver element locator for Firefox");
 		selenium.get("http://" + ipAddress);
+		sleep();
+		selenium.manage().window().maximize();
 		sleep();
 		
 		WebElement query = selenium.findElement(By.xpath("//input[@id='loginName']"));
@@ -43,6 +45,8 @@ public class Paxata	extends SeleniumClass{
 		//selects 'logout'
 		selenium.findElement(By.xpath("//a[@ng-click='logout()']")).click();
 		System.out.println("Successfully logged out of paxata server");
+		sleep();
+		selenium.quit();
 	}
 	
 }
