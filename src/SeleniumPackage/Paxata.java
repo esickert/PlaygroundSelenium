@@ -9,9 +9,14 @@ import org.openqa.selenium.support.ui.Select;
 
 public class Paxata	extends SeleniumClass{
 	
-	String ipAddress = "10.1.10.74:8080";
+	String ipAddress;
 	
 	Paxata()	{
+		
+	}
+	
+	Paxata(String address)	{
+		ipAddress = address;
 	}
 	
 /*	public void setIP(String address)	{
@@ -19,17 +24,19 @@ public class Paxata	extends SeleniumClass{
 	}  */
 	
 	public void loginToPaxataAndCloseHelp()	{
+		//change this to login to gmail!!!
 		System.out.println("This will login to paxata. NOTE these web elements were found using WebDriver element locator for Firefox");
 		selenium.get("http://" + ipAddress);
+//		selenium.get("http:////accounts.google.com/ServiceLogin?service=mail&continue=https://mail.google.com/mail/#identifier");
 		sleep();
 		selenium.manage().window().maximize();
 		sleep();
-		
+//**************************************************************************************************************************		
 		WebElement query = selenium.findElement(By.xpath("//input[@id='loginName']"));
-		query.sendKeys("superuser");
+		query.sendKeys("superuser");  //THIS IS THE LOGIN
 		query = selenium.findElement(By.xpath("//input[@name='password']"));
 		query.sendKeys(Keys.TAB);
-		query.sendKeys("superuser");
+		query.sendKeys("superuser");  //THIS IS THE PASSWORD!!!!!!!!!!!!!!!!!!
 		query.sendKeys(Keys.ENTER);
 				System.out.println("Successfully logged into Paxata.");
 		sleep(); 

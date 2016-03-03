@@ -14,7 +14,6 @@ public class Google	extends SeleniumClass	{
 	
 	public void openAndCloseGoogleAndBing()	{
 		
-//		sleep();
 		selenium.navigate().to("http://www.bing.com");
 		selenium.manage().window().maximize();
 		sleep();
@@ -35,28 +34,12 @@ public class Google	extends SeleniumClass	{
 		System.out.println("Successfully clicked on the link to Apple website. Retrieved link xpath via Firebug analysis tool");
 
 		sleep();
-		clearCookies();
+		clearCookies();       //clears all browser cookies
 		sleep();
-//		selenium.close();  //It closes the the browser window on which the focus is set.
+//		selenium.close();     //It closes the the browser window on which the focus is set.
 //		sleep();
-		selenium.quit();  //It basically calls driver.dispose method which in turn closes all the browser windows and ends the WebDriver session gracefully.
-//		selenium.dispose();  // this errors out - "method dispose() is undefined for type Webdriver". Use quit()
-	
-//	selenium.close();
-//	x.get("http://www.store.demoqa.com");
-//	x.selenium.get("http://10.1.10.63:8080");
-//	selenium.get("http://www.google.com");
-//	sleep();
-//	selenium.navigate().to("http://www.bing.com");
-//	System.out.println("Successfully opened 'www.bing.com' website using 'x.navigate().to()'");
-	
-	
-
-	//Launch the Google Website
-	
-	
-	
-
+		selenium.quit();      //this basically calls driver.dispose method which in turn closes all the browser windows and ends the WebDriver session gracefully.
+//		selenium.dispose();   // this errors out - "method dispose() is undefined for type Webdriver". Use quit()
 	
 	}
 
