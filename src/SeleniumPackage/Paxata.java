@@ -45,7 +45,7 @@ public class Paxata	extends SeleniumClass{
 //		query.sendKeys(Keys.ENTER);
 		query = selenium.findElement(By.xpath("//input[@name='password']"));
 		query.sendKeys(Keys.TAB);
-		query.sendKeys("superuser");  //THIS IS THE PASSWORD!!!!!!!!!!!!!!!!!!
+		query.sendKeys("superuser");  
 		query.sendKeys(Keys.ENTER);
 		System.out.println(dateTime() + " Successfully logged into Paxata.");
 		sleep(); 
