@@ -15,11 +15,11 @@ public class Google	extends SeleniumClass	{
 	public void openAndCloseGoogleAndBing()	{
 		
 		selenium.navigate().to("http://www.bing.com");
-		selenium.manage().window().maximize();
+		maximizeWindow();
 		sleep();
-		System.out.println("Successfully opened 'www.bing.com' website using 'x.navigate().to()'");
+		System.out.println(dateTime() + " Successfully opened 'www.bing.com' website using 'x.navigate().to()'");
 		selenium.get("http://www.google.com");
-		System.out.println("Successfully opened the google website");
+		System.out.println(dateTime() + " Successfully opened the google website");
 		sleep();
 		
 		
@@ -27,11 +27,11 @@ public class Google	extends SeleniumClass	{
 		WebElement query = selenium.findElement(By.name("q"));	
 		query.sendKeys("apple");
 		query.sendKeys(Keys.ENTER);
-		System.out.println("Successfully entered query string 'apple' in Google hit ENTER");
+		System.out.println(dateTime() + " Successfully entered query string 'apple' in Google hit ENTER");
 		sleep();
 		
 		selenium.findElement(By.xpath("html/body/div[1]/div[5]/div[4]/div[7]/div[1]/div[3]/div/div[2]/div[2]/div/div/div/div[1]/div/div/h3/a")).click();
-		System.out.println("Successfully clicked on the link to Apple website. Retrieved link xpath via Firebug analysis tool");
+		System.out.println(dateTime() + "Successfully clicked on the link to Apple website. Retrieved link xpath via Firebug analysis tool");
 
 		sleep();
 		clearCookies();       //clears all browser cookies

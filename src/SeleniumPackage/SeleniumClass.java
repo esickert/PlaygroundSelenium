@@ -6,15 +6,18 @@ import org.openqa.selenium.firefox.*;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.Keys;
 
+import java.util.*;
+
 public class SeleniumClass	{
 	
+//	Date date = new Date();
 	WebDriver selenium = new FirefoxDriver();
 	
 	SeleniumClass()	{
 	}
 	
 	public void sleep()	{
-		System.out.println("Sleeps for 10 secs, 10000 microsecs");
+		System.out.println(dateTime() + " Sleeps for 10 secs, 10000 microsecs");
 		try {
 			Thread.sleep(10000);
 		}	catch (InterruptedException e) {
@@ -24,10 +27,16 @@ public class SeleniumClass	{
 	
 	public void clearCookies()	{
 		selenium.manage().deleteAllCookies();
-		System.out.println("Deleted all browser cookies");
+		System.out.println(dateTime() +  " Deleted all browser cookies");
 	}
 	
 	public void maximizeWindow()	{
 		selenium.manage().window().maximize();
+		System.out.println(dateTime() + " Successfully maximized window");
+	}
+	
+	public Date dateTime()	{
+		Date date = new Date();
+		return date;
 	}
 }

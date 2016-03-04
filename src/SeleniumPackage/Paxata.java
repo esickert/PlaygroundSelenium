@@ -7,9 +7,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.*;
+
 public class Paxata	extends SeleniumClass{
 	
 	String ipAddress;
+	
+	Date date = new Date();
 	
 	Paxata()	{
 		
@@ -22,38 +26,44 @@ public class Paxata	extends SeleniumClass{
 /*	public void setIP(String address)	{
 		ipAddress = address;
 	}  */
-	
+//switch this off of paxata to something else!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!	
 	public void loginToPaxataAndCloseHelp()	{
 		//change this to login to gmail!!!
-		System.out.println("This will login to paxata. NOTE these web elements were found using WebDriver element locator for Firefox");
+		System.out.println(dateTime() + " This will login to paxata. NOTE these web elements were found using WebDriver element locator for Firefox");
 		selenium.get("http://" + ipAddress);
 //		selenium.get("http:////accounts.google.com/ServiceLogin?service=mail&continue=https://mail.google.com/mail/#identifier");
 		sleep();
-		selenium.manage().window().maximize();
+		maximizeWindow();
+//		selenium.manage().window().maximize();
 		sleep();
 //**************************************************************************************************************************		
 		WebElement query = selenium.findElement(By.xpath("//input[@id='loginName']"));
+//		WebElement query = selenium.findElement(By.xpath("html/body/div/div[2]/div[2]/div[1]/form/div[1]/div/div[1]/div/div/input[1]"));
 		query.sendKeys("superuser");  //THIS IS THE LOGIN
+		sleep();
+//		query.sendKeys(Keys.TAB);
+//		query.sendKeys(Keys.ENTER);
 		query = selenium.findElement(By.xpath("//input[@name='password']"));
 		query.sendKeys(Keys.TAB);
 		query.sendKeys("superuser");  //THIS IS THE PASSWORD!!!!!!!!!!!!!!!!!!
 		query.sendKeys(Keys.ENTER);
-				System.out.println("Successfully logged into Paxata.");
+		System.out.println(dateTime() + " Successfully logged into Paxata.");
 		sleep(); 
-		System.out.println("Sleeping inside Paxata.java");
+		System.out.println(dateTime() + " Sleeping inside Paxata.java");
 		sleep();
 		selenium.findElement(By.xpath("//button[@ng-click='toggleHidingHelp()']")).click(); //THIS WORKED!!
-		System.out.println("Successfully closed the 'Help' window frame");
+		System.out.println(dateTime() + " Successfully closed the 'Help' window frame");
 		sleep();
 		//opens the drop down menu Account (shadow person in upper right corner)
 		selenium.findElement(By.xpath("//i[contains(@class,'icon-user')]")).click();
-		System.out.println("Successfully opened drop down menu");
+		System.out.println(dateTime() + " Successfully opened drop down menu");
 		sleep();
 		//selects 'logout'
 		selenium.findElement(By.xpath("//a[@ng-click='logout()']")).click();
-		System.out.println("Successfully logged out of paxata server");
+		System.out.println(dateTime() + " Successfully logged out of paxata server");
 		sleep();
-		selenium.quit();
+		selenium.quit(); //this basically calls driver.dispose method which in turn closes all the browser windows and ends the WebDriver session gracefully.
+		System.out.println(dateTime() + "Successfully closed the browser");
 	}
 	
 }
