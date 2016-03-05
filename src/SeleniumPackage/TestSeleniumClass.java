@@ -6,16 +6,16 @@ public class TestSeleniumClass {
 		// TODO Auto-generated method stub
 		int count = 0;
 	
-		for (int i = 0; i < 5; i++)	{
+		for (int i = 0; i < 1; i++)	{
 		System.out.println("NEED TO SET THIS UP WITH JUNIT!!!!!");
 //issue of polymopherism and my understanding of it (not!) occurring here.
-		Paxata x = new Paxata("10.1.10.74:8080");  //this creates an instance of Paxata class which contains an instance of WebDriver
-//		Google y = new Google();
+//		Paxata x = new Paxata("10.1.10.74:8080");  //this creates an instance of Paxata class which contains an instance of WebDriver
+		Google y = new Google();
 
-		x.loginToPaxataAndCloseHelp();
-//		y.openAndCloseGoogleAndBing();
+//		x.loginToPaxataAndCloseHelp();
+		y.openAndCloseGoogleAndBing();
 		
-		System.out.println(x.dateTime() + " This script has run " + ++count + " times.");
+		System.out.println(y.dateTime() + " This script has run " + ++count + " times.");
 		}
 		System.out.println("That's all folks!");
 	}
