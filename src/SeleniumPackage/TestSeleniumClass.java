@@ -9,13 +9,13 @@ public class TestSeleniumClass {
 		for (int i = 0; i < 10; i++)	{
 		System.out.println("NEED TO SET THIS UP WITH JUNIT!!!!!");
 //issue of polymopherism and my understanding of it (not!) occurring here.
-//		Paxata x = new Paxata("10.1.10.74:8080");  //this creates an instance of Paxata class which contains an instance of WebDriver
-		Google y = new Google();
+		Paxata x = new Paxata("10.1.10.72:8080");  //this creates an instance of Paxata class which contains an instance of WebDriver
+//		Google y = new Google();
 
-//		x.loginToPaxataAndCloseHelp();
-		y.openAndCloseGoogleAndBing();
+		x.loginToPaxataAndCloseHelp();
+//		y.openAndCloseGoogleAndBing();
 		
-		System.out.println(y.dateTime() + " This script has run " + ++count + " times.");
+		System.out.println(x.dateTime() + " This script has run " + ++count + " times.");
 		}
 		System.out.println("Tha..tha..that's all folks!");
 	}
