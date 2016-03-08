@@ -31,7 +31,7 @@ public class Google	extends SeleniumClass	{
 		sleep();
 		
 		selenium.findElement(By.xpath("html/body/div[1]/div[5]/div[4]/div[7]/div[1]/div[3]/div/div[2]/div[2]/div/div/div/div[1]/div/div/h3/a")).click();
-		System.out.println(dateTime() + "Successfully clicked on the link to Apple website. Retrieved link xpath via Firebug analysis tool");
+		System.out.println(dateTime() + " Successfully clicked on the link to Apple website. Retrieved link xpath via Firebug analysis tool");
 
 		sleep();
 		clearCookies();       //clears all browser cookies
