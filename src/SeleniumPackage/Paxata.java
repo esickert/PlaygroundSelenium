@@ -28,7 +28,7 @@ public class Paxata	extends SeleniumClass{
 	}  */
 //switch this off of paxata to something else!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!	
 	public void loginToPaxataAndCloseHelp()	{
-		//change this to login to gmail!!!
+		//change this to login to gmail!!!??
 		System.out.println(dateTime() + " This will login to paxata. NOTE these web elements were found using WebDriver element locator for Firefox");
 		selenium.get("http://" + ipAddress);
 //		selenium.get("http:////accounts.google.com/ServiceLogin?service=mail&continue=https://mail.google.com/mail/#identifier");
@@ -51,15 +51,28 @@ public class Paxata	extends SeleniumClass{
 		sleep(); 
 		System.out.println(dateTime() + " Sleeping inside Paxata.java");
 		sleep();
+		
 		selenium.findElement(By.xpath("//button[@ng-click='toggleHidingHelp()']")).click(); //THIS WORKED!!
 		System.out.println(dateTime() + " Successfully closed the 'Help' window frame");
 		sleep();
+		
 		//opens the drop down menu Account (shadow person in upper right corner)
 		selenium.findElement(By.xpath("//i[contains(@class,'icon-user')]")).click();
 		System.out.println(dateTime() + " Successfully opened drop down menu");
 		sleep();
-		//selects 'logout'
+		
+//		selenium.findElement(By.xpath("//a[@ng-click='buildInfo()']")).click();
+//		System.out.println("Successfully openned 'About' box");
+//		sleep();
+		
+//		selenium.findElement(By.xpath("//button[@eng-click='close()']")).click();
+		
+		
+		
+		
 		selenium.findElement(By.xpath("//a[@ng-click='logout()']")).click();
+		
+		//selects 'logout'
 		System.out.println(dateTime() + " Successfully logged out of paxata server");
 		sleep();
 		selenium.quit(); //this basically calls driver.dispose method which in turn closes all the browser windows and ends the WebDriver session gracefully.
