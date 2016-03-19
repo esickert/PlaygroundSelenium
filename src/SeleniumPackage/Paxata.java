@@ -64,8 +64,9 @@ public class Paxata	extends SeleniumClass{
 //		selenium.findElement(By.xpath("//a[@ng-click='buildInfo()']")).click();
 //		System.out.println("Successfully openned 'About' box");
 //		sleep();
-		
-//		selenium.findElement(By.xpath("//button[@eng-click='close()']")).click();
+		//***********************************************************************************************
+//		don't use html
+//		selenium.findElement(By.xpath("html/body/div[8]/div/div/div[2]/div/div[3]/button")).click();
 		
 		
 		
