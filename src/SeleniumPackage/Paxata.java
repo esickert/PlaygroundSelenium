@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.Select;
 
+import org.junit.*;
+
 import java.util.*;
 
 public class Paxata	extends SeleniumClass{
@@ -82,6 +84,7 @@ public class Paxata	extends SeleniumClass{
 	}
 	
 	public static void openPaxataBrowser(WebDriver x, String y)	{
+//		@Test
 		x.get(y);
 	}
 	
