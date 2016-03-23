@@ -15,12 +15,12 @@ public class Paxata	extends SeleniumClass{
 	
 	Date date = new Date();
 	
-	Paxata()	{
+	Paxata()	{   //this is a constructor
 		
 	}
 	
-	Paxata(String address)	{
-		ipAddress = address;
+	Paxata(String address)	{     //this is a constructor
+		ipAddress = "http://10.1.10.55:8080";
 	}
 	
 /*	public void setIP(String address)	{
@@ -30,7 +30,8 @@ public class Paxata	extends SeleniumClass{
 	public void loginToPaxataAndCloseHelp()	{
 		//change this to login to gmail!!!??
 		System.out.println(dateTime() + " This will login to paxata. NOTE these web elements were found using WebDriver element locator for Firefox");
-		selenium.get("http://" + ipAddress);
+		openPaxataBrowser(selenium, ipAddress);
+//		selenium.get("http://" + ipAddress);
 //		selenium.get("http:////accounts.google.com/ServiceLogin?service=mail&continue=https://mail.google.com/mail/#identifier");
 		sleep();
 		maximizeWindow();
@@ -78,6 +79,10 @@ public class Paxata	extends SeleniumClass{
 		sleep();
 		selenium.quit(); //this basically calls driver.dispose method which in turn closes all the browser windows and ends the WebDriver session gracefully.
 		System.out.println(dateTime() + "Successfully closed the browser");
+	}
+	
+	public static void openPaxataBrowser(WebDriver x, String y)	{
+		x.get(y);
 	}
 	
 }
