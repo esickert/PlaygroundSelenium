@@ -20,7 +20,7 @@ public class Paxata	extends SeleniumClass{
 	}
 	
 	Paxata(String address)	{     //this is a constructor
-		ipAddress = "http://10.1.10.55:8080";
+		ipAddress = address;
 	}
 	
 /*	public void setIP(String address)	{
