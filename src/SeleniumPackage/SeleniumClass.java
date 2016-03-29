@@ -17,9 +17,9 @@ public class SeleniumClass	{
 	}
 	
 	public void sleep()	{
-		System.out.println(dateTime() + " Sleeps for 10 secs, 10000 microsecs");
+		System.out.println(dateTime() + " Sleeps for 5 secs, 5000 microsecs");
 		try {
-			Thread.sleep(10000);
+			Thread.sleep(5000);
 		}	catch (InterruptedException e) {
 			e.printStackTrace();
 		}

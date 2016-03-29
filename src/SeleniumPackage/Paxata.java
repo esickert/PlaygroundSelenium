@@ -40,16 +40,15 @@ public class Paxata	extends SeleniumClass{
 //		selenium.manage().window().maximize();
 		sleep();
 //**************************************************************************************************************************		
-		WebElement query = selenium.findElement(By.xpath("//input[@id='loginName']"));
-//		WebElement query = selenium.findElement(By.xpath("html/body/div/div[2]/div[2]/div[1]/form/div[1]/div/div[1]/div/div/input[1]"));
-		query.sendKeys("superuser");  //THIS IS THE LOGIN
+		WebElement thing = selenium.findElement(By.xpath("//input[@id='loginName']"));
+
+		thing.sendKeys("superuser");  //THIS IS THE LOGIN
 		sleep();
-//		query.sendKeys(Keys.TAB);
-//		query.sendKeys(Keys.ENTER);
-		query = selenium.findElement(By.xpath("//input[@name='password']"));
-		query.sendKeys(Keys.TAB);
-		query.sendKeys("superuser");  
-		query.sendKeys(Keys.ENTER);
+
+		thing = selenium.findElement(By.xpath("//input[@name='password']"));
+		thing.sendKeys(Keys.TAB);
+		thing.sendKeys("superuser");  
+		thing.sendKeys(Keys.ENTER);
 		System.out.println(dateTime() + " Successfully logged into Paxata.");
 		sleep(); 
 		System.out.println(dateTime() + " Sleeping inside Paxata.java");
@@ -64,23 +63,23 @@ public class Paxata	extends SeleniumClass{
 		System.out.println(dateTime() + " Successfully opened drop down menu");
 		sleep();
 		
-//		selenium.findElement(By.xpath("//a[@ng-click='buildInfo()']")).click();
-//		System.out.println("Successfully openned 'About' box");
-//		sleep();
+		selenium.findElement(By.xpath("//a[@ng-click='buildInfo()']")).click();
+		System.out.println("Successfully openned 'About' box");
+		sleep();
 		//***********************************************************************************************
 //		don't use html
-//		selenium.findElement(By.xpath("html/body/div[8]/div/div/div[2]/div/div[3]/button")).click();
-		
-		
-		
+		selenium.findElement(By.xpath("//button[@ng-click='close()']")).click();
+		sleep();
+		selenium.findElement(By.xpath("//i[contains(@class,'icon-user')]")).click();
+		System.out.println(dateTime() + " Successfully opened drop down menu");
+		sleep();
 		
 		selenium.findElement(By.xpath("//a[@ng-click='logout()']")).click();
-		
-		//selects 'logout'
 		System.out.println(dateTime() + " Successfully logged out of paxata server");
 		sleep();
+		clearCookies();
 		selenium.quit(); //this basically calls driver.dispose method which in turn closes all the browser windows and ends the WebDriver session gracefully.
-		System.out.println(dateTime() + "Successfully closed the browser");
+		System.out.println(dateTime() + " Successfully closed the browser");
 	}
 	
 	public static void openPaxataBrowser(WebDriver x, String y)	{
