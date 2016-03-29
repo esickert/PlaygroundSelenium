@@ -2,10 +2,10 @@ package SeleniumPackage;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.By;
-import org.openqa.selenium.firefox.*;
+//import org.openqa.selenium.firefox.*;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.support.ui.Select;
+//import org.openqa.selenium.support.ui.Select;
 
 import org.junit.*;
 
@@ -36,8 +36,9 @@ public class Paxata	extends SeleniumClass{
 //		selenium.get("http://" + ipAddress);
 //		selenium.get("http:////accounts.google.com/ServiceLogin?service=mail&continue=https://mail.google.com/mail/#identifier");
 		sleep();
-		maximizeWindow();
+//		maximizeWindow();
 //		selenium.manage().window().maximize();
+		setWindowSize();
 		sleep();
 //**************************************************************************************************************************		
 		WebElement thing = selenium.findElement(By.xpath("//input[@id='loginName']"));

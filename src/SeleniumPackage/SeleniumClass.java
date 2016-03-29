@@ -1,10 +1,11 @@
 package SeleniumPackage;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+//import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.*;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.Keys;
+//import org.openqa.selenium.WebElement;
+//import org.openqa.selenium.Keys;
 
 import java.util.*;
 
@@ -39,4 +40,11 @@ public class SeleniumClass	{
 		Date date = new Date();
 		return date;
 	}
+	
+	public void setWindowSize()	{
+		Dimension size = new Dimension(900, 600);
+		selenium.manage().window().setSize(size);
+		System.out.println(dateTime() + " Succesfully resized the window"); 
+	}
+		
 }

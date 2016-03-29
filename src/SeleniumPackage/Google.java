@@ -1,11 +1,11 @@
 package SeleniumPackage;
 
-import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.By;
-import org.openqa.selenium.firefox.*;
+//import org.openqa.selenium.firefox.*;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.support.ui.Select;
+//import org.openqa.selenium.support.ui.Select;
 
 public class Google	extends SeleniumClass	{
 	

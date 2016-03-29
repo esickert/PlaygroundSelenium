@@ -6,10 +6,10 @@ public class TestSeleniumClass {
 		// TODO Auto-generated method stub
 		int count = 0;
 	
-		for (int i = 0; i < 3; i++)	{
+		for (int i = 0; i < 1; i++)	{
 		System.out.println("NEED TO SET THIS UP WITH JUNIT!!!!!");
 //issue of polymopherism and my understanding of it (not!) occurring here.
-		Paxata x = new Paxata("http://10.1.10.62:8080");  //this creates an instance of Paxata class which contains an instance of WebDriver
+		Paxata x = new Paxata("http://10.1.10.69:8080");  //this creates an instance of Paxata class which contains an instance of WebDriver
 //		Google y = new Google();
 
 		x.loginToPaxataAndCloseHelp();
