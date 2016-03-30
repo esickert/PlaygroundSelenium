@@ -34,6 +34,7 @@ public class SeleniumClass	{
 	public void maximizeWindow()	{
 		selenium.manage().window().maximize();
 		System.out.println(dateTime() + " Successfully maximized window");
+		sleep();
 	}
 	
 	public Date dateTime()	{
@@ -44,7 +45,8 @@ public class SeleniumClass	{
 	public void setWindowSize()	{
 		Dimension size = new Dimension(900, 600);
 		selenium.manage().window().setSize(size);
-		System.out.println(dateTime() + " Succesfully resized the window"); 
+		System.out.println(dateTime() + " Succesfully resized the window");
+		sleep();
 	}
 		
 }

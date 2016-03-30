@@ -36,7 +36,7 @@ public class Paxata	extends SeleniumClass{
 //		selenium.get("http://" + ipAddress);
 //		selenium.get("http:////accounts.google.com/ServiceLogin?service=mail&continue=https://mail.google.com/mail/#identifier");
 		sleep();
-//		maximizeWindow();
+		maximizeWindow();
 //		selenium.manage().window().maximize();
 		setWindowSize();
 		sleep();
