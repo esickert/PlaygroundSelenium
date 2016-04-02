@@ -23,6 +23,7 @@ public class SeleniumClass	{
 			Thread.sleep(5000);
 		}	catch (InterruptedException e) {
 			e.printStackTrace();
+			System.err.println("ERROR: Problem with sleep method!!!");
 		}
 	}
 	
