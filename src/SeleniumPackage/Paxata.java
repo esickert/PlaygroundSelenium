@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.Keys;
 //import org.openqa.selenium.support.ui.Select;
 
-import org.junit.*;
+//import org.junit.*;
 
 import java.util.*;
 
@@ -34,7 +34,6 @@ public class Paxata	extends SeleniumClass{
 		System.out.println(dateTime() + " This will login to paxata. NOTE these web elements were found using WebDriver element locator for Firefox");
 		openPaxataBrowser(selenium, ipAddress);
 //		selenium.get("http://" + ipAddress);
-//		selenium.get("http:////accounts.google.com/ServiceLogin?service=mail&continue=https://mail.google.com/mail/#identifier");
 		sleep();
 		maximizeWindow();
 //		selenium.manage().window().maximize();
@@ -65,12 +64,23 @@ public class Paxata	extends SeleniumClass{
 		sleep();
 		
 		selenium.findElement(By.xpath("//a[@ng-click='buildInfo()']")).click();
-		System.out.println("Successfully openned 'About' box");
+		System.out.println(dateTime() + "Successfully openned 'About' box");
 		sleep();
-		//***********************************************************************************************
-//		don't use html
+
 		selenium.findElement(By.xpath("//button[@ng-click='close()']")).click();
 		sleep();
+
+		selenium.findElement(By.xpath("//i[contains(@class,'icon-user')]")).click();
+		System.out.println(dateTime() + " Successfully opened drop down menu");
+		sleep();
+		
+		selenium.findElement(By.xpath("//a[@ng-click='myAccount()']")).click();
+		sleep();
+		
+		selenium.findElement(By.xpath("//button[@ng-click='userForm.revert()']")).click();
+		System.out.println(dateTime() + " Successfully opened and closed 'My Account'");
+		sleep();
+		
 		selenium.findElement(By.xpath("//i[contains(@class,'icon-user')]")).click();
 		System.out.println(dateTime() + " Successfully opened drop down menu");
 		sleep();
