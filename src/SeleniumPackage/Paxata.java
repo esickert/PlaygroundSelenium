@@ -36,6 +36,9 @@ public class Paxata	extends SeleniumClass{
 //		selenium.get("http://" + ipAddress);
 		sleep();
 		maximizeWindow();
+		selenium.navigate().refresh(); 
+		System.out.println(dateTime() + " Successfully refresh screen");
+		sleep();
 //		selenium.manage().window().maximize();
 		setWindowSize();
 		sleep();
@@ -57,10 +60,12 @@ public class Paxata	extends SeleniumClass{
 		selenium.findElement(By.xpath("//button[@ng-click='toggleHidingHelp()']")).click(); //THIS WORKED!!
 		System.out.println(dateTime() + " Successfully closed the 'Help' window frame");
 		sleep();
+//      trying to open the right drop down menu, the title changes though!!!!		
+//		selenium.findElement(By.xpath("//i[contains(@class,'admin')]")).click();
 		
 		//opens the drop down menu Account (shadow person in upper right corner)
 		selenium.findElement(By.xpath("//i[contains(@class,'icon-user')]")).click();
-		System.out.println(dateTime() + " Successfully opened drop down menu");
+		System.out.println(dateTime() + " Successfully opened drop down menu- person icon in upperright corner");
 		sleep();
 		
 		selenium.findElement(By.xpath("//a[@ng-click='buildInfo()']")).click();
