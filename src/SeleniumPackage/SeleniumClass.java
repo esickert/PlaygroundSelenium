@@ -18,13 +18,17 @@ public class SeleniumClass	{
 	}
 	
 	public void sleep()	{
-		System.out.println(dateTime() + " Sleeps for 5 secs, 5000 microsecs");
-		try {
-			Thread.sleep(5000);
-		}	catch (InterruptedException e) {
-			e.printStackTrace();
-			System.err.println("ERROR: Problem with sleep method!!!");
+		System.out.println(dateTime() + " Sleep for 5 secs, 5000 microsecs");
+		for(int i = 1; i <= 5; i++)	{
+			System.out.print(i + " ");
+			try {
+				Thread.sleep(1000);
+			}	catch (InterruptedException e) {
+					e.printStackTrace();
+					System.err.println("ERROR: Problem with sleep method!!!");
+				}
 		}
+		System.out.println();
 	}
 	
 	public void clearCookies()	{
