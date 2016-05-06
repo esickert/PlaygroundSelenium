@@ -35,8 +35,8 @@ public class Google	extends SeleniumClass	{
 		System.out.println(dateTime() + " Successfully refresh screen");
 		//***********************************************************************************************
 		sleep();
-//		selenium.findElement(By.xpath("Apple</a>")).click(); //this doesn't work!!!!!
-		selenium.findElement(By.xpath("html/body/div[1]/div[5]/div[4]/div[7]/div[1]/div[3]/div/div[3]/div[2]/div/div/div/div[1]/div/div/h3/a")).click();
+		selenium.findElement(By.xpath("//a[contains(.,'Apple')]")); //this doesn't work BUT it also doesn't BLOW UP!!
+//		selenium.findElement(By.xpath("html/body/div[1]/div[5]/div[4]/div[7]/div[1]/div[3]/div/div[3]/div[2]/div/div/div/div[1]/div/div/h3/a")).click();
 		System.out.println(dateTime() + " Successfully clicked on the link to Apple website. Retrieved link xpath via Firebug analysis tool");
 
 		sleep();
