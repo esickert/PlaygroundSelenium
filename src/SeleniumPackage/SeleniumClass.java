@@ -7,6 +7,8 @@ import org.openqa.selenium.firefox.*;
 //import org.openqa.selenium.WebElement;
 //import org.openqa.selenium.Keys;
 
+import javax.swing.JOptionPane;
+
 import java.util.*;
 
 public class SeleniumClass	{
@@ -18,12 +20,15 @@ public class SeleniumClass	{
 	}
 	
 	public void sleep()	{
+//		GUI dialog box but requires user action		
+//		JOptionPane.showMessageDialog(null, "Please wait...",null,JOptionPane.INFORMATION_MESSAGE);
 		System.out.println(dateTime() + " Sleep for 5 secs, 5000 microsecs");
 		for(int i = 1; i <= 5; i++)	{
 			System.out.print(i + " ");
 			try {
 				Thread.sleep(1000);
-			}	catch (InterruptedException e) {
+			}	
+				catch (InterruptedException e) {
 					e.printStackTrace();
 					System.err.println("ERROR: Problem with sleep method!!!");
 				}
