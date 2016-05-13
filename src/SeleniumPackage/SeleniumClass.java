@@ -20,8 +20,6 @@ public class SeleniumClass	{
 	}
 	
 	public void sleep()	{
-//		GUI dialog box but requires user action		
-//		JOptionPane.showMessageDialog(null, "Please wait...",null,JOptionPane.INFORMATION_MESSAGE);
 		System.out.println(dateTime() + " Sleep for 5 secs, 5000 microsecs");
 		for(int i = 1; i <= 5; i++)	{
 			System.out.print(i + " ");
@@ -33,6 +31,7 @@ public class SeleniumClass	{
 					System.err.println("ERROR: Problem with sleep method!!!");
 				}
 		}
+		
 		System.out.println();
 	}
 	
